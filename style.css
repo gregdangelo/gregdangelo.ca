@@ -1,0 +1,231 @@
+/*
+# Bug fixes
+*/
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix,* html .video  { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/*
+# Reset defaults ################### 
+*/
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td { margin: 0; padding: 0; } 
+div { border:0px solid #fff;}
+a:link, a:visited{text-decoration:none;outline:none;}
+/*li{list-style-type:none;}/*this really is not a good idea just something that bugs me*/
+
+/*
+# Colors
+*/
+body{ background:#162131;color:#ddd; }/*just playing with colors right now*/
+a{ color:#b13204; }
+a:hover,.tip{
+	background:#b13204;
+	color:#fff;
+}
+#filter a:hover{
+	background:#ddd;
+	background:-webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.07, rgb(221,221,221)),
+		color-stop(0.54, rgb(221,221,221)),
+		color-stop(0.79, rgb(201,199,201))
+		);
+	background:
+		-moz-linear-gradient(
+		center bottom,
+		rgb(221,221,221) 7%,
+		rgb(221,221,221) 54%,
+		rgb(201,199,201) 79%
+		);
+	color:#d43a07;
+}
+#filter a:active,#filter a.active{
+	background:#b13204;
+	color:#fff;
+}
+.grid_4 h3,.highlight{color:#b13204;}
+.section{border-top:3px solid #b13204;}
+.grid_12{padding-bottom:40px;}
+#filter li.title{ 
+	background:#b13204;
+	background:-webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.07, rgb(177,50,4)),
+		color-stop(0.54, rgb(177,50,4)),
+		color-stop(0.79, rgb(212,58,7))
+	);
+	background:-moz-linear-gradient(
+		center bottom,
+		rgb(177,50,4) 7%,
+		rgb(177,50,4) 54%,
+		rgb(212,58,7) 79%
+	);
+	color:#fff;
+}
+
+/*
+# Layout ################### 
+*/
+
+body{
+	font:1em/1.5  "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#container{padding-bottom:100px;}
+#portfolio {height:/*850*/1120px;}
+#process .grid_8,#history .grid_8 {padding-bottom:20px;}
+#portfolio-dialog{ display:none;}
+#portfolio-content {height:470px;width:740px;overflow:hidden;}
+#portfolio-content div {height:470px;width:740px;display:none;}
+#portfolio-content div.active {display:block;}
+/*I want the jump bar to follow us along*/
+/*#jumpbar { position:relative;margin:-80px;top:0;left:0;}*/
+#filter {padding-top:0em;padding-left:30px;}
+/*
+# Nav ################### 
+*/
+
+/*
+# Headings ################### 
+*/
+
+h1{font-size:3.5em;text-shadow:#cecece -1px -1px -5px;}
+
+h2{font-size:2.5em;padding:20px 0;}
+
+h3{font-size:2.0em;}
+
+h4{font-size:1.5em;}
+
+/*
+# Lists ################### 
+*/
+
+ul{margin:0 0 0 30px;}
+#contact ul {margin:0}
+#contact li,#portfolio-content li,#filter li{ list-style-type:none; }
+#filter li { float: left; padding:1.0em;}
+#filter ul { border:2px solid #fff; -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;}
+/*
+# Images ################### 
+*/
+
+img{border:none;}
+img.left{margin:0 10px 10px 0;}
+img.right{margin:0 0 10px 10px;}
+#portfolio-content img,#applications img  {
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+}
+
+/*
+# Links ################### 
+*/
+
+a{
+	text-decoration:underline;
+	padding:3px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+a:hover{ text-decoration:none; }
+#applications a { padding:0; }
+
+/*
+# Forms ################### 
+*/
+
+fieldset {border-radius:5px;height:75px;}
+/*
+# Tables ################### 
+*/
+
+
+
+/*
+# Typography ################### 
+*/
+
+p{margin:0 0 0.5em;font-size:1.2em;}
+.highlight{font-size:1.0em;margin-top:2.5em;}
+li{font-size:1.2em;}
+fieldset legend{font-size:1.4em;}
+.tip{
+	padding:3px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;}
+#portfolio-content li, #portfolio-content p { font-size:1.0em;}
+#portfolio p { margin-bottom:1em; margin-left:140px;}
+#extra-version { font-size:0.5em;}
+#about .grid_8 { padding-top:10px; }
+/*
+# Other ################### 
+*/
+
+.right{float:right;}
+.left{float:left;}
+.clear{clear:both;}
+.alignleft{text-align: left;}
+.alignright{text-align: right;}
+.aligncenter{text-align: center;}
+
+/* 3.2 =Image Grid
+---------------------------------------------------------------------- */
+
+.image-grid {
+  /*margin: -20px 0 0 -40px;*/
+    margin: 15px 0 0 -40px;
+
+  padding-left: 45px;
+  padding-top: 75px;
+  width: 960px;
+}
+
+.image-grid:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+
+.image-grid li {
+  width: 128px;
+  margin: 20px 0 0 35px;
+  float: left;
+  text-align: center;
+  list-style-type:none;
+  line-height: 17px;
+  color: #686f74;
+  height: 177px;
+  overflow: hidden;
+}
+
+.image-grid li img,
+.image-grid li strong {
+  display: block;
+}
+.image-grid li strong {
+  color: #000;
+  display:none;
+}
+#clickfun { background:#fff;}
+#totheend {display:none;}
